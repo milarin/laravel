@@ -8,6 +8,6 @@ use Illuminate\Http\Response;
 class AppController extends Controller
 {
     public function index() {
-        return view('app');
+        return view('top');
     }
 }

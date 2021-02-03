@@ -1,0 +1,450 @@
+@charset "utf-8";
+
+// 変数
+$main_color: #99cc65;
+$sub_color: #47763c;
+
+
+
+// 共通部分-----------------------
+html {
+  font-size: 100%;
+}
+body{
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color: #432;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+a {
+  color: $main_color;
+}
+.logo {
+  width: 70px;
+  margin-top: 20px;
+  margin-left: 5%;
+  overflow: hidden;
+  // transition-duration: 0.3s;
+}
+.logo:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+
+.main-nav {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px;
+  li {
+    a {
+      font-size: 15px;
+      display: block;
+      opacity: 0.7;
+      padding: 10px;
+      text-align: center;
+      box-shadow:rgba($color: $main_color, $alpha: 0.7)  0 0px 0px 1px inset;
+    }
+    a:hover {
+      // color: $sub_color;
+      transition: all .5s;
+      box-shadow: rgba($color: $main_color, $alpha: 0.2) 0 0px 0px 30px inset;
+    }
+  }
+}
+.btn {
+  display: block;
+  background: $main_color;
+  color: #432;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.btn:hover {
+  background: $sub_color;
+  color: #fff;
+  transition: all .5s;
+}
+.content {
+  text-align: center;
+  margin-top: 10%;
+  .top-text {
+    font-family: 'Philosopher';
+    margin-bottom: 20px;
+    color: $main_color;
+    span {
+      display: none;
+    }
+  }
+  h2 {
+    position: absolute;
+    top: 30px;
+    right: 10%;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+}
+.footer-nav {
+  margin-top: 50px;
+  ul {
+    li {
+      position: relative;
+      list-style: none;
+      text-align: center;
+      margin-top: 25px;
+      a {
+        position: relative;
+        display: block;
+        padding: 20px ;
+        width: 80%;
+        margin: 0 auto;
+        background: rgba($color: $main_color, $alpha: 0.05);
+      }
+      a:hover .border-top {
+         transition: all .5s;
+          width:102%;
+          height:105%;
+      }
+      a:hover .border-bottom {
+         transition: all .5s;
+          width:102%;
+          height:105%;
+      }
+    }
+  }
+  .border-top {
+    position: absolute;
+    top:0;
+    left:0;
+    border-left:1px solid $main_color;
+    border-top:1px solid $main_color;
+    width:30px;
+    height:30px;
+  }
+  .border-bottom {
+    position: absolute;
+    bottom:0;
+    right:0;
+    border-bottom:1px solid $main_color;
+    border-right:1px solid $main_color;
+    width:30px;
+    height:30px;
+  }
+}
+.box {
+  margin: 30px auto;
+  iframe {
+    max-width: 100%;
+  }
+}
+
+.item {
+  width: 90%;
+  margin: 20px auto;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+  a {
+    position: relative;
+    padding: auto;
+    display: block;
+  }
+  a:hover {
+    color: $sub_color;
+    background: rgba($color: $sub-color, $alpha: 0.1);
+  }
+  .thumbnail {
+    width: 100%;
+  }
+  .channel-icon {
+    position: absolute;
+    width: 60px;
+    top: 0;
+    right: 0;
+  }
+}
+
+aside {
+  .tags {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 5px;
+    margin-bottom: 30px;
+    border-bottom: solid 1px $main_color;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    padding: 5px 10px;
+  }
+  a:hover {
+    color: $sub_color;
+    background: rgba($color: $sub-color, $alpha: 0.1);
+  }
+}
+.detail-content {
+  display: block;
+  margin: 150px auto;
+  text-align: center;
+  iframe {
+    width: 100%;
+    height: 315px;
+    padding: auto;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    a {
+      margin-left: 20px;
+    }
+  }
+}
+
+
+  
+
+
+
+
+
+// nav responsive ---------------------------
+@media (max-width: 1023px) {
+  .humberger-btn {
+    display: block;
+    position: fixed;
+    z-index: 20;
+    right: 13px;
+    top: 12px;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+    span {
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      left: 6px;
+      background: $main_color;
+      transition: 0.3s ease-in-out;
+    }
+    .top {
+      top: 10px;
+    }
+    .mid {
+      top: 20px;
+    }
+    .bot {
+      top: 30px;
+    }
+  }
+  .humberger-btn.active {
+    transition: all 0.3s;
+    transition-delay: 0.6s;
+    transform: rotate(45deg);
+  }
+  .humberger-btn.active .mid {
+    width: 0px;
+  }
+  .humberger-btn.active .top,
+  .humberger-btn.active .mid  {
+    transition-delay: 0.3s;
+  }
+  .humberger-btn.active .top {
+    transform: translateY(4px);
+  }
+  .humberger-btn.active .bot {
+    transform: translateY(-16px) rotate(90deg);
+  }
+  #menu {
+  position: fixed;
+  z-index: 19;
+  top: 0;
+  left: 0;
+  text-align: center;
+  transform: translateX(100%);
+  transition: all .9s;
+  width: 100%;
+  }
+  #menu.active {
+    transform: translateX(0%);
+    background: rgb(80, 80, 80);
+  }
+}
+// nav responsive ---------------------------
+
+
+
+
+
+// tablet responsive ------------------------
+@media (min-width: 768px) {
+  .logo {
+    width: 100px;
+  }
+  .content {
+    .top-text {
+      span {
+        display: none;
+      }
+    }
+    h2 {
+      position: absolute;
+      top: 32px;
+      font-size: 4rem;
+    }
+  }
+  .footer-nav {
+      li {
+        margin-top: 20px;
+      }
+  }
+  .main-nav {
+    display: block;
+    li {
+      margin-top: 20px;
+    }
+  }
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;
+  }
+  .item {
+    width: 32%;
+    .channel-icon {
+      width: 25%;
+    }
+  }
+}
+.detail-content {
+  text-align: center;
+  iframe {
+    max-width: 80%;
+    height: 400px;
+  }
+}
+// tablet responsive ------------------------
+
+
+
+
+
+
+
+
+
+
+// PC responsive ----------------------------
+@media (min-width: 1024px) {
+  .logo {
+    width: 130px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-nav {
+    display: flex;
+    font-size: 20px;
+    margin-top: 35px;
+    li {
+      margin-left: 15px;
+    }
+  }
+  .content {
+    h2 {
+      position: static;
+      font-size: 5rem;
+    }
+    .top-text {
+      position: relative;
+      margin-bottom: 30px;
+      span {
+        display: block;
+        position: absolute;
+        right: 30%;
+        bottom: 0;
+      }
+    }
+  }
+  .btn {
+    display: inline;
+    padding: 20px 50px;
+  }
+  .footer-nav {
+    margin-top: 140px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        width: 30%;
+        margin: 0;
+      }
+    }
+  }
+  .sub-nav {
+    display: none;
+  }
+  .box {
+    display: flex;
+    justify-content: space-between;
+  }
+  // iframe {
+  //   width: 49%;
+  // }
+  form {
+    width: 50%;
+  }
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  main {
+    width: 78%;
+    order: 2;
+  }
+  aside {
+    width: 20%;
+    order: 1;
+    margin-top: 20px;
+    li {
+      list-style: none;
+      margin-left: 20px;
+    }
+  }
+  .item {
+    width: 32%;
+    max-height: 250px;
+  }
+  .detail-content {
+    display: block;
+    margin: 150px auto;
+    text-align: center;
+    iframe {
+      width: 80%;
+      height: 500px;
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      a {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+// PC responsive ----------------------------
