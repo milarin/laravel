@@ -58,7 +58,7 @@
     <main>
       @foreach($items as $item)
       <div class="item">
-        <a href="#">
+        <a href='{{ route("detail", ["id" =>  $item->id]) }}'>
           <img src="{{ asset('image/' . $item->url) }}" alt="" class="thumbnail">
           <img src="image/logo.jpeg" alt="" class="channel-icon">
           <p class="title">{{ $item->title }}</p>

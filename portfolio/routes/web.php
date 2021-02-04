@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 Route::get('/home', 'AppController@index');
 Route::get('/search', 'AppController@search');
-Route::get('/home', 'AppController@index');
+Route::get('/detail', 'AppController@show')->name('detail');

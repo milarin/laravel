@@ -17,4 +17,9 @@ class AppController extends Controller
         $items = DB::table('content')->get();
         return view('search',['items' => $items]);
     }
+    public function show($id)
+    {
+        $items = DB::table('content')->find($id);
+        return view('detail', ['items' => $items]);
+    }
 }
