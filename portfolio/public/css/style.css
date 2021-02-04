@@ -165,7 +165,7 @@ a {
 }
 
 .box {
-  margin: 30px auto;
+  margin: 50px auto;
 }
 
 .box iframe {
@@ -177,6 +177,7 @@ a {
   margin: 20px auto;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+  line-height: 20px;
 }
 
 .item a {
@@ -199,6 +200,10 @@ a {
   width: 60px;
   top: 0;
   right: 0;
+}
+
+.main-content {
+  margin-bottom: 100px;
 }
 
 aside .tags {
@@ -226,8 +231,12 @@ aside a:hover {
 
 .detail-content {
   display: block;
-  margin: 150px auto;
+  margin: 70px auto;
   text-align: center;
+}
+
+.detail-content p {
+  margin-top: 20px;
 }
 
 .detail-content iframe {
@@ -245,6 +254,11 @@ aside a:hover {
 
 .detail-content ul a {
   margin-left: 20px;
+}
+
+.category-title {
+  text-align: right;
+  margin: 20px 0;
 }
 
 @media (max-width: 1023px) {
@@ -333,6 +347,9 @@ aside a:hover {
     top: 32px;
     font-size: 4rem;
   }
+  .footer-nav {
+    margin-bottom: 60px;
+  }
   .footer-nav li {
     margin-top: 20px;
   }
@@ -345,12 +362,13 @@ aside a:hover {
   main {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 5px;
   }
   .item {
-    width: 32%;
+    margin: 0;
+    margin-bottom: 20px;
   }
   .item .channel-icon {
     width: 25%;
@@ -461,12 +479,13 @@ aside a:hover {
     margin-left: 20px;
   }
   .item {
-    width: 32%;
-    max-height: 250px;
+    max-height: 230px;
+    margin: 0;
+    margin-bottom: 20px;
   }
   .detail-content {
     display: block;
-    margin: 150px auto;
+    margin: 50px auto;
     text-align: center;
   }
   .detail-content iframe {
@@ -478,6 +497,7 @@ aside a:hover {
     display: -ms-flexbox;
     display: flex;
     list-style: none;
+    margin-top: 20px;
   }
   .detail-content ul a {
     margin-left: 20px;

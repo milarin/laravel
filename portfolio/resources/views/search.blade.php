@@ -56,15 +56,15 @@
     </aside>
 
     <main>
-      <div class="item">
       @foreach($items as $item)
+      <div class="item">
         <a href="#">
           <img src="{{ asset('image/' . $item->url) }}" alt="" class="thumbnail">
           <img src="image/logo.jpeg" alt="" class="channel-icon">
           <p class="title">{{ $item->title }}</p>
         </a>
-      @endforeach
       </div><!-- .item -->
+      @endforeach
 
     </main>
 
