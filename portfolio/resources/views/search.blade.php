@@ -57,11 +57,13 @@
 
     <main>
       <div class="item">
+      @foreach($items as $item)
         <a href="#">
-          <img src="image/hqdefault.webp" alt="" class="thumbnail">
+          <img src="{{ asset('image/' . $item->url) }}" alt="" class="thumbnail">
           <img src="image/logo.jpeg" alt="" class="channel-icon">
-          <p class="title">【神回】対戦廃人の俺がポケモン攻略サイトに育成論を投稿した結果……【バチンキー編】</p>
+          <p class="title">{{ $item->title }}</p>
         </a>
+      @endforeach
       </div><!-- .item -->
 
     </main>
