@@ -7,7 +7,12 @@ use Illuminate\Http\Response;
 
 class AppController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         return view('top');
+    }
+    public function search()
+    {
+        return view('search');
     }
 }
