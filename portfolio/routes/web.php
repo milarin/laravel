@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('top');
 });
-Route::get('/home', 'AppController@index');
-Route::get('/search', 'AppController@search');
-Route::get('/detail', 'AppController@show')->name('detail');
+Route::get('/home', 'ContentController@index');
+Route::get('/search', 'ContentController@search');
+Route::get('/detail', 'ContentController@show')->name('detail');
+Route::get('/detail/{id}', 'ContentController@show');
