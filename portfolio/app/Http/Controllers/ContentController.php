@@ -46,7 +46,7 @@ class ContentController extends Controller
      * @param  \App\Models\Content  $content
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request, Content $content, $id)
+    public function show(Request $request, $id, Content $content)
     {
         $items = Content::find($id);
         return view('detail', ['items' => $items]);
